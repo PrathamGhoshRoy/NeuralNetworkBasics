@@ -37,6 +37,7 @@ class Activation_Softmax:
     # Normalization: value/sum(values); Basically since the max value was exponentiated to 0, normalization will make it 1
     # And every other values a number between 0 to 1 but not 1
     probabilities = exp_values / np.sum(exp_values, axis=1, keepdims=True)
+    self.output = probabilities
 
 X, y = spiral_data(samples=100, classes=3)
 
